@@ -1,3 +1,3 @@
 # Project1_QL
 Landing gear system
-Author: Rossana Cammardella
+Authors: Rossana Cammardella & Robin Desir
