@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="441.00019999999495" prefWidth="632.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.ece.qa.view.Cockpit">
+  <children>
+    <Text layoutX="252.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cockpit Panel">
+      <font>
+        <Font name="System Bold" size="20.0" />
+      </font>
+    </Text>
+    <Pane layoutX="409.0" layoutY="87.0" prefHeight="171.0" prefWidth="178.0" style="-fx-border-color: #cdcdcd; -fx-border-radius: 10;">
+      <children>
+        <Button layoutX="41.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleUP" opacity="1.0" style="-fx-background-color: #3e88fb;" text="Handle Up" textAlignment="CENTER" textFill="WHITE" />
+        <Button layoutX="32.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleDOWN" style="-fx-background-color: #3e88fb;" text="Handle Down" textAlignment="CENTER" textFill="WHITE" textOverrun="ELLIPSIS" />
+        <Text layoutX="41.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pilot Handle" textAlignment="CENTER">
+          <font>
+            <Font size="18.0" fx:id="x1" />
+          </font>
+        </Text>
+      </children>
+    </Pane>
+    <Button layoutX="538.0" layoutY="371.0" maxHeight="38.0" maxWidth="165.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: #ffffff; -fx-border-color: #d34141; -fx-background-radius: 5; -fx-border-radius: 5;" textAlignment="CENTER">
+      <graphic>
+        <SVGPath content="M40 9.162v8.497c2.263 0.988 4.344 2.401 6.142 4.199 3.778 3.777 5.858 8.8 5.858 14.142s-2.080 10.365-5.858 14.142c-3.777 3.777-8.8 5.858-14.142 5.858s-10.365-2.080-14.142-5.858c-3.777-3.777-5.858-8.8-5.858-14.142s2.080-10.365 5.858-14.142c1.798-1.798 3.879-3.211 6.142-4.199v-8.497c-11.566 3.443-20 14.155-20 26.838 0 15.464 12.536 28 28 28s28-12.536 28-28c0-12.684-8.434-23.396-20-26.838zM28 0h8v32h-8z" scaleX="0.2" scaleY="0.2">
+          <fill>
+            <Color blue="0.255" green="0.255" red="0.827" fx:id="x2" />
+          </fill>
+        </SVGPath>
+      </graphic>
+    </Button>
+    <Pane layoutX="42.0" layoutY="87.0" prefHeight="246.0" prefWidth="346.0" style="-fx-border-color: #cdcdcd; -fx-border-radius: 10;">
+      <children>
+        <Circle id="redLight" fx:id="redLight1" layoutX="173.0" layoutY="74.0" radius="19.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0">
+          <fill>
+            <Color blue="0.859" green="0.859" red="0.859" fx:id="x3" />
+          </fill>
+        </Circle>
+        <Circle id="orangeLight" fx:id="orangeLight1" fill="$x3" layoutX="243.0" layoutY="74.0" radius="19.0" stroke="ORANGE" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle id="greenLight" fx:id="greenLight1" fill="$x3" layoutX="313.0" layoutY="74.0" radius="19.0" stroke="GREEN" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle id="redLight" fx:id="redLight2" fill="$x3" layoutX="173.0" layoutY="136.0" radius="19.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle id="orangeLight" fx:id="orangeLight2" fill="$x3" layoutX="243.0" layoutY="136.0" radius="19.0" stroke="ORANGE" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle id="greenLight" fx:id="greenLight2" fill="$x3" layoutX="313.0" layoutY="136.0" radius="19.0" stroke="GREEN" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle id="redLight" fx:id="redLight3" fill="$x3" layoutX="173.0" layoutY="206.0" radius="19.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle id="orangeLight" fx:id="orangeLight3" fill="$x3" layoutX="243.0" layoutY="206.0" radius="19.0" stroke="ORANGE" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle id="greenLight" fx:id="greenLight3" fill="$x3" layoutX="313.0" layoutY="206.0" radius="19.0" stroke="GREEN" strokeType="INSIDE" strokeWidth="0.0" />
+        <Text font="$x1" layoutX="122.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System State" />
+        <Pane layoutX="14.0" layoutY="61.0" prefHeight="26.951171875" prefWidth="102.1904296875">
+          <children>
+            <TextField alignment="CENTER" layoutX="0.0" layoutY="1.0" prefWidth="96.873046875" text="GearSet 1" />
+          </children>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="123.0" prefHeight="26.951171875" prefWidth="102.1904296875">
+          <children>
+            <TextField alignment="CENTER" layoutX="0.0" layoutY="1.0" prefWidth="96.873046875" text="GearSet 2" />
+          </children>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="193.0" prefHeight="26.951171875" prefWidth="102.1904296875">
+          <children>
+            <TextField alignment="CENTER" layoutX="0.0" layoutY="1.0" prefWidth="96.873046875" text="GearSet 3" />
+          </children>
+        </Pane>
+      </children>
+    </Pane>
+    <TextField id="" fx:id="MessageArea" layoutX="42.0" layoutY="359.0" prefHeight="38.0" prefWidth="346.0" />
+  </children>
+</AnchorPane>
